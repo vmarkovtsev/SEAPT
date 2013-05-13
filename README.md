@@ -77,5 +77,9 @@ make check
 ```
 in the root build directory. Each test is allowed to run no longer than 10 seconds. You can override this value by setting TIMEOUT variable during make invocation. SEAPT automatically measures memory consumption and saves the XML results obtained from gtest.
 
+Eclipse
+-------
+It is recommended to install [ANSI Console](http://www.mihai-nita.net/eclipse/) plugin to see colored build output (anyway, it can be turned off with ```configure --disable-colors```).
+
 SEAPT is released under the Simplified BSD License.
 Copyright 2012,2013 Samsung R&D Institute Russia.
