@@ -34,10 +34,10 @@ lib_LTLIBRARIES = lib???.la
 lib???_la_SOURCES =
 
 # Linker options
-lib???_la_LDFLAGS = 
+lib???_la_LDFLAGS = $(AM_LDFLAGS)
 
 # Compiler options
-lib???_la_CPPFLAGS = 
+lib???_la_CPPFLAGS = $(AM_CPPFLAGS)
 
 # Used libraries
 lib???_la_LIBADD = 
@@ -46,7 +46,7 @@ PARALLEL_SUBDIRS =
 
 
 #######################################
-# Subdirectory instructions
+# Recursive subdirectory instructions
 
 # 1. Create Makefile.am in the subdirectory:
 
@@ -58,7 +58,7 @@ PARALLEL_SUBDIRS =
 #lib_subdir_la_SOURCES =
 
 # Compiler options
-#lib_subdir_la_CPPFLAGS =
+#lib_subdir_la_CPPFLAGS = $(AM_CPPFLAGS)
 
 # 2. Add subdir/Makefile to configure.ac at AC_CONFIG_FILES
 
@@ -69,3 +69,8 @@ PARALLEL_SUBDIRS =
 # 4. Add subdir to parent directory Makefile.am's PARALLEL_SUBDIRS
 
 # PARALLEL_SUBDIRS = subdir
+
+#######################################
+# Non-recursive subdirectory instructions
+
+# 1. Add the source files directly to lib???_la_SOURCES
