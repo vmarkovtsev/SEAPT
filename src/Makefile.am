@@ -34,7 +34,8 @@ lib_LTLIBRARIES = lib???.la
 lib???_la_SOURCES =
 
 # Linker options
-lib???_la_LDFLAGS = $(AM_LDFLAGS)
+lib???_la_LDFLAGS = $(AM_LDFLAGS) \
+	-version-info $(INTERFACE_VERSION):$(REVISION_NUMBER):$(AGE_NUMBER)
 
 # Compiler options
 lib???_la_CPPFLAGS = $(AM_CPPFLAGS)
