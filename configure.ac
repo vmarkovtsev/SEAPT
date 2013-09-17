@@ -68,3 +68,5 @@ AC_SUBST(AGE_NUMBER, [0])
 #                )
 
 AC_OUTPUT
+
+COMMON_PRINT_STATUS
