@@ -38,7 +38,7 @@ fi
 # Apply project name to template files
 find -name '*\?\?\?*' -exec git rm --cached {} >/dev/null \;
 mmv -m \*\\?\\?\\?\* \#1$1\#2
-find -not -path './.git*' -not -type d | xargs sed -i "s/???/$1/g"
+find -not -path './.git/*' -not -type d | xargs sed -i "s/???/$1/g"
 git rm -f $0 >/dev/null
 
 # Setup Git
