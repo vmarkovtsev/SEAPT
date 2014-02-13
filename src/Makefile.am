@@ -24,6 +24,7 @@
 ##  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 include $(top_srcdir)/Makefile.common
+include Sources.make
 
 lib_LTLIBRARIES = lib???.la
 
@@ -31,7 +32,7 @@ lib_LTLIBRARIES = lib???.la
 # Build information for lib???.la
 
 # Source files
-lib???_la_SOURCES =
+lib???_la_SOURCES = $(SOURCES)
 
 # Linker options
 lib???_la_LDFLAGS = $(AM_LDFLAGS) \
@@ -74,4 +75,4 @@ PARALLEL_SUBDIRS =
 #######################################
 # Non-recursive subdirectory instructions
 
-# 1. Add the source files directly to lib???_la_SOURCES
+# 1. Add the source files directly to Sources.make

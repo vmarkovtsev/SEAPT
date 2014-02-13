@@ -20,3 +20,5 @@ ltmain.sh
 missing
 !Doxyfile.in
 !???.pc.in
+!Application.mk.in
+!Android.mk.in
