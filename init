@@ -31,7 +31,8 @@ if [[ -z "$1" ]]; then
 fi
 
 if [[ -z $(which mmv) ]]; then
-	echo "mmv utility is needed to proceed. On Ubuntu, you can install it with sudo apt-get install mmv" >&2
+	echo "mmv utility is needed to proceed. On Ubuntu, you can install it with:" >&2
+        echo "sudo apt-get install mmv" >&2
 	exit 1
 fi
 
@@ -39,6 +40,7 @@ fi
 find -name '*\?\?\?*' -exec git rm --cached {} >/dev/null \;
 mmv -m \*\\?\\?\\?\* \#1$1\#2
 find -not -path './.git/*' -not -type d | xargs sed -i "s/???/$1/g"
+mkdir -p "inc/$1"
 git rm -f $0 >/dev/null
 
 # Setup Git
